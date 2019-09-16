@@ -3,10 +3,10 @@
 #include <string.h>
 
 /**
- * main - print sizes
+ * main - Incoming
  *
- * Description: This c program will output sizes of types.
- * Return: 0
+ * Description: Prints a string w/o printf or puts
+ * Return: 1
  */
 int main(void)
 {
