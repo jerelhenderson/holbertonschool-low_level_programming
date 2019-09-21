@@ -7,7 +7,7 @@
  *@c: Lowercase 'int.'
  * Return: 1 if true, 0 if false
  */
-void _islower(int c)
+int _islower(int c)
 {
 	if (c > 96 && c < 123)
 	{
