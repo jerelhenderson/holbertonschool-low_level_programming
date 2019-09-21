@@ -2,7 +2,7 @@
 
 
 /**
- * main - print times table
+ * times_table - print times table
  *
  * Description: Print a times table, using 9
  * Return: Always 0.
