@@ -4,7 +4,8 @@
 /**
  * add - add two integers
  *
- *@int: Adds two numbers together
+ *@x: first int
+ *@y: second int
  * Return: 0
  */
 int add(int x, int y)
