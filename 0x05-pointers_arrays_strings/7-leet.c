@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * leet - word converter
+ * *leet - word converter
  *
  * @s: string
  * Return: convereted text
