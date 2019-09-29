@@ -4,7 +4,7 @@
  * *leet - word converter
  *
  * @s: string
- * Return: convereted text
+ * Return: converted text
  */
 char *leet(char *s)
 {
