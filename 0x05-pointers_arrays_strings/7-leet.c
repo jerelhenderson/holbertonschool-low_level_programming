@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * *leet - word converter
  *
@@ -8,21 +8,25 @@
  */
 char *leet(char *s)
 {
-	int i = 0;
+	int index;
+	int replace;
+	char *s2 = "E3e3A4a4L1l1T7t7O0o0";
 
-	while (s[i] != '\0')
+	index = 0;
+	while (s[index] != '\0')
 	{
-		while (s[i] == 'a' || s[i] == 'A')
-			s[i] = '4';
-		while (s[i] == 'e' || s[i] == 'E')
-			s[i] = '3';
-		while (s[i] == 'o' || s[i] == 'O')
-			s[i] = '0';
-		while (s[i] == 't' || s[i] == 'T')
-			s[i] = '7';
-		while (s[i] == 'l' || s[i] == 'L')
-			s[i] = '1';
-		i++;
+		replace = 0;
+		while (s2[replace] != '\0')
+		{
+			if (s[index] == s2[replace])
+			{
+				replace++;
+				s[index] = s2[replace];
+				break;
+			}
+			replace = replace + 2;
+		}
+		index++;
 	}
 	return (s);
 }
