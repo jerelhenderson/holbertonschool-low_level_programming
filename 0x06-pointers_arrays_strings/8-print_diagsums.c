@@ -23,8 +23,8 @@ void print_diagsums(int *a, int size)
 				sum1 = sum1 + *a;
 			if (col == size - 1 - row)
 				sum2 = sum2 + *a;
+			a++;
 		}
-		a++;
 	}
 	printf("%d, %d\n", sum1, sum2);
 }
