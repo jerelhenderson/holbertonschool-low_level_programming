@@ -21,7 +21,6 @@ int _sqrt_recursion(int n)
  * Return: square root, or -1 if none
  */
 int help(int c, int i)
-	int help(int n, int i)
 {
 	if (i * i == n)
 		return (i);
