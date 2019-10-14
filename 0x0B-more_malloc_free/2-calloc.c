@@ -4,6 +4,7 @@
 
 /**
  * _calloc - allocate memory for array
+ *
  * @nmemb: values in array
  * @size: size of data type
  * Return: array
@@ -19,11 +20,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	arr = malloc(nmemb * sizeof(int));
 	if (arr == NULL)
 		return (NULL);
-  i = 0;
-  while (i <nmemb * size)
-  {
-    arr[idx] = 0;
-    idx++;
-  }
+	i = 0;
+	while (i < nmemb * size)
+	{
+		arr[idx] = 0;
+		idx++;
+	}
 	return (arr);
 }

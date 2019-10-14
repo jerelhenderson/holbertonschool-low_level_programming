@@ -3,12 +3,11 @@
 
 
 /**
- * malloc_checked - allocate memory to
+ * malloc_checked - allocate memory
  *
  * @b: allocated var
  * Return: pointer
  */
-
 void *malloc_checked(unsigned int b)
 {
 	int *ptr;
