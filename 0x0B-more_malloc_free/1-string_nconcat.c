@@ -15,7 +15,7 @@ int _strlen(char *s)
 	lngth = 0;
 	while (s[lngth] != '\0')
 		lngth++;
-	return (l);
+	return (lngth);
 }
 
 /**
@@ -38,7 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	count = _strlen(s1) + 1 + n;
 
-	ptr = malloc(count * sizeof(char)) + '\0';
+	ptr = malloc(count * sizeof(char) + '\0');
 	if (ptr == NULL)
 		return (NULL);
 
