@@ -3,19 +3,18 @@
 
 
 /**
- * _strlen - get string length
+ * _strlen - length of a string
  *
- * @s: character type
- * Return: 1
+ * @s: char type
+ * Return: returns the string length
  */
 int _strlen(char *s)
 {
-	int lngth;
+	int i = 0;
 
-	lngth = 0;
-	while (s[lngth] != '\0')
-		lngth++;
-	return (lngth);
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
 
 /**
@@ -48,6 +47,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ptr[idx1] = s1[idx1];
 		idx1++;
 	}
+
 	idx2 = 0;
 	while (idx2 < n)
 	{

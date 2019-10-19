@@ -1,12 +1,13 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 
 /**
  * _strdup - returns function to new memory space
  *
  * @str: str copy
- * Return - duplicated string, or NULL
+ * Return: duplicated string, or NULL
  */
 char *_strdup(char *str)
 {

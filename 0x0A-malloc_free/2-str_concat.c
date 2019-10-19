@@ -14,7 +14,7 @@ char *str_concat(char *s1, char *s2)
 {
 	char *space;
 	int idx1, idx2;
-	int x;
+	int cpy1;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -28,31 +28,26 @@ char *str_concat(char *s1, char *s2)
 	while (s2[idx2] != '\0')
 		idx2++;
 
-	x = idx1 + idx2;
-	printf("%d\n", x);
-
-	space = malloc(16);
+	space = malloc((idx1 + idx2) * sizeof(char));
 	if (space == NULL)
 		return (NULL);
-	printf("First: %d Second: %d Allocated: %lu", idx1, idx2, sizeof(space));
 
-/**
-        idx1 = 0;
+        cpy1 = 0;
+	idx1 = 0;
 	while (s1[idx1] != '\0')
 	{
-		s1[idx1] = space[idx1];
+		space[cpy1] = s1[idx1];
 		idx1++;
+		cpy1++;
 	}
-	printf("Boo here: %d", s1[idx1]);
 
-	idx2 = 0;
-	while (s2[idx2] != '\0')
+ 	idx1 = 0;
+	while (s2[idx1] != '\0')
 	{
-	       s2[idx2] = space[idx1];
-	       idx2++;
+	       space[cpy1] = s2[idx1];
 	       idx1++;
+	       cpy1++;
 	}
-**/
-	space[idx1] = '\0';
+	space[cpy1] = '\0';
 	return (space);
 }
