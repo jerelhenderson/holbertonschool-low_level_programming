@@ -3,10 +3,8 @@
 /**
  * main - performs operations
  *
- *
- *
- *
- *
+ * @argc: count arguments
+ * @argv: argument array
  * Return: result of operation
  */
 int main(int argc, char *argv[])

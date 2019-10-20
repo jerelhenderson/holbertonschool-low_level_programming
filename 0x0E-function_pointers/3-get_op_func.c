@@ -5,8 +5,6 @@
  * get_op_func - pointer to function
  *
  * @s: program argument
- * @int: integer type
- * @int: integer type
  * Return: pointer to function of correspending operator
  */
 int (*get_op_func(char *s))(int, int)
