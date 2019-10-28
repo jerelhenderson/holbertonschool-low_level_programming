@@ -10,17 +10,15 @@
 size_t list_len(const list_t *h)
 {
 	int n;
-	const list_t *position;
 
 	n = 0;
-	position = h;
 
-	if (h == NULL)
-	printf("[0] (nil)\n");
-
-	while (position != NULL)
+	while (h != NULL)
 	{
-		position = position->next;
+		if (h->str == NULL)
+			return (0);
+		else
+			h = h->next;
 		n++;
 	}
 	return (n);

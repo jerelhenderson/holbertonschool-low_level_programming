@@ -28,7 +28,7 @@ list_t *add_node(list_t **head, const char *str)
 	list_len = 0;
 
 	while (str[list_len] != '\0')
-	        list_len++;
+		list_len++;
 
 	new->len = list_len;
 	new->str = strdup(str);
