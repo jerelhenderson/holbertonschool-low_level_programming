@@ -2,9 +2,9 @@
 
 
 /**
- * main - put text
+ * main - "put" text
  *
- * Description: This c program will print text.
+ * Description: uses `puts` function to "put" text to screen
  * Return: 0
  */
 int main(void)

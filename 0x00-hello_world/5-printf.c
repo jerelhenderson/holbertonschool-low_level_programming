@@ -2,9 +2,9 @@
 
 
 /**
- * main - printf text
+ * main - "print" text
  *
- * Description: This c program will print text.
+ * Description: uses `printf` function to "print" text to screen
  * Return: 0
  */
 int main(void)

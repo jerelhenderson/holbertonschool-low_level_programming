@@ -1,2 +1,3 @@
 #!/bin/bash
+/* generate Intel syntax (assembly code) of a C program using masm=intel */
 gcc -S -masm=intel $CFILE

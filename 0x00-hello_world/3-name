@@ -1,2 +1,3 @@
 #!/bin/bash
+/* fully compiles script into exec file */
 gcc $CFILE -o cisfun

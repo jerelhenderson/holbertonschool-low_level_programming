@@ -3,9 +3,9 @@
 #include <string.h>
 
 /**
- * main - Incoming
+ * main - iterate through a string and prints to screen
  *
- * Description: Prints a string w/o printf or puts
+ * Description: iterates through length of given string and "writes" to screen
  * Return: 1
  */
 int main(void)

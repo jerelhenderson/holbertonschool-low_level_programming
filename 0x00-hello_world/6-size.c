@@ -2,9 +2,9 @@
 
 
 /**
- * main - print sizes
+ * main - outputs sizes of types
  *
- * Description: This c program will output sizes of types.
+ * Description: outputs size of various data types
  * Return: 0
  */
 int main(void)

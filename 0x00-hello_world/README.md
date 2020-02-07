@@ -1,20 +1,20 @@
 # Holberton School - Low Level Programming
 ## 0x00 - C (Hello World)
 
-###Purpose
+### Purpose
 This introductory C programming language project covers
 * `main` function
 * `gcc` compiler system
 * `printf`, `puts`, `putchar` print functions
 * `sizeof` unary operator
 
-###Requirements
+### Requirements
 * Ubunto 14.04 LTS
 * gcc 4.8.4
 
-###File List
+### File List
 | Program	  | Description						     |
-| -------------   |:--------------------------------------------------------:|
+| --------------- |:--------------------------------------------------------:|
 | 0-preprocessor  | runs C file through preprocessor, saves to another file  |
 | 1-compiler      | compiles C file, does not link			     |
 | 2-assembler	  | generates C program assembly code, saves to another file |
