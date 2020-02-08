@@ -2,29 +2,24 @@
 
 
 /**
- * main - Incoming
+ * main - putchar function
  *
- * Description: Prints the alphabet in lowercase.
+ * Description: prints alphabet in lowercase, w/o 'q' and 'e'
  * Return: 0
  */
 int main(void)
 {
-	char a = 'a';
+	char alpha;
 
-	while (a <= 'z')
+	alpha = 'a';
+	while (alpha != 'z' + 1)
 	{
-		if (a != 'q' && a != 'e')
-		{
-		putchar(a);
-		a++;
-		}
-		else
-		{
-			a++;
-		}
-
+		if (alpha == 'q' || alpha == 'e')
+			alpha++;
+		putchar(alpha);
+		alpha++;
 	}
-
 	putchar('\n');
+
 	return (0);
 }

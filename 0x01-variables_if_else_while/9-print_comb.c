@@ -1,27 +1,29 @@
 #include <stdio.h>
 
+
 /**
- * main - Incoming
+ * main - print base10
  *
- * Description: Print all possible single-digit numbers combos.
- *
+ * Description: print single digit nums from 0 in base10
  * Return: 0
  */
 int main(void)
 {
-	int i;
+	int num;
 
-	i = '0';
-	while (i <= '9')
+	num = '0';
+
+	while (num <= '9')
 	{
-		putchar(i);
-		if (i != '9')
+		putchar(num);
+		if (num != '9')
 		{
 			putchar(',');
 			putchar(' ');
 		}
-		i++;
+		num++;
 	}
 	putchar('\n');
+
 	return (0);
 }

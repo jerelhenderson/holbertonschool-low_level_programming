@@ -1,38 +1,37 @@
 #include <stdio.h>
 
+
 /**
- * main - Incoming
+ * main - print base10
  *
- * Description: Print all possible single-digit numbers combos.
- *
+ * Description: print single digit nums from 0 in base10
  * Return: 0
  */
 int main(void)
 {
-	int i;
-	int j;
+	int tens;
+	int ones;
 
-	i = 48;
-	j = 48;
-	while (i < 58)
+	tens = 48;
+	ones = 48;
+
+	while (tens < 58)
 	{
-		while (j < 58)
+		while (ones < 58)
 		{
-			putchar(i);
-			putchar(j);
-			if (i != 57 ||  j != 57)
-			{
-				putchar(44);
-				putchar(32);
-			}
-
-			j++;
-
+			putchar(tens);
+			putchar(ones);
+			if (tens != 57 || ones != 57)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			ones++;
 		}
-		j = 48;
-
-		i++;
+		ones = 48;
+		tens++;
 	}
 	putchar('\n');
+
 	return (0);
 }

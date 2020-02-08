@@ -1,22 +1,23 @@
- #include <stdio.h>
+#include <stdio.h>
 
 
 /**
- * main - Incoming
+ * main - putchar function
  *
- * Description: Prints the alphabet in lowercase.
+ * Description print alphabet in lowercase
  * Return: 0
  */
 int main(void)
 {
-	char a = 'a';
+	int alpha;
 
-	while (a <= 'z')
+	alpha = 'a';
+	while (alpha != 'z' + 1)
 	{
-		putchar(a);
-		a++;
+		putchar(alpha);
+		alpha++;
 	}
-
 	putchar('\n');
+
 	return (0);
 }

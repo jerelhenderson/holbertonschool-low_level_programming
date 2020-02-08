@@ -1,23 +1,24 @@
 #include <stdio.h>
 
+
 /**
- * main - Incoming
+ * main - print base10
  *
- * Description: Print single digit numbers starting from 0.
- *
+ * Description: print single digit nums from 0 in base10, using putchar
  * Return: 0
  */
 int main(void)
 {
-	int i;
+	int num;
 
-	i = '0';
+	num = '0';
 
-	while (i <= '9')
+	while (num <= '9')
 	{
-		putchar(i);
-		i++;
+		putchar(num);
+		num++;
 	}
 	putchar('\n');
+
 	return (0);
 }

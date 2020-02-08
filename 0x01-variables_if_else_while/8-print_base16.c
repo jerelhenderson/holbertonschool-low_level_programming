@@ -1,21 +1,31 @@
 #include <stdio.h>
 
+
 /**
- * main - Incoming
+ * main - print base10
  *
- * Description: Prints base 16 numbers in lowercase.
- *
+ * Description: print single digit nums from 0 in base10, using putchar
  * Return: 0
  */
 int main(void)
 {
-	int i;
+	int num;
 
-	while (i < 16)
+	num = '0';
+
+	while (num <= '9')
 	{
-		putchar();
-		i++;
+		putchar(num);
+		num++;
+	}
+
+	num = 'a';
+	while (num <= 'f')
+	{
+		putchar(num);
+		num++;
 	}
 	putchar('\n');
+
 	return (0);
 }

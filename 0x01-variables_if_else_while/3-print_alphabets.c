@@ -2,29 +2,30 @@
 
 
 /**
- * main - Incoming
+ * main - putchar function
  *
- * Description: Prints the alphabet in uppercase and lowercase.
+ * Description: print alphabet in lowercase, uppercase
  * Return: 0
  */
 int main(void)
 {
-	char a = 'a';
-	char A = 'A';
+	char lower;
+	char upper;
 
-	while (a <= 'z')
+	lower = 'a';
+	upper = 'A';
+
+	while (lower != 'z' + 1)
 	{
-		putchar(a);
-		a++;
+		putchar(lower);
+		lower++;
 	}
-
-	while
-		(A <= 'Z');
+	while (upper != 'Z' + 1)
 	{
-		putchar(A);
-		A++;
+		putchar(upper);
+		upper++;
 	}
-
 	putchar('\n');
+
 	return (0);
 }
