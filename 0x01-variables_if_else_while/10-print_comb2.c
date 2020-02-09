@@ -22,10 +22,10 @@ int main(void)
 			putchar(tens);
 			putchar(ones);
 			if (tens != 57 || ones != 57)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+			{
+				putchar(',');
+				putchar(' ');
+			}
 			ones++;
 		}
 		ones = 48;

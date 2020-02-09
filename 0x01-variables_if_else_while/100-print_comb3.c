@@ -20,18 +20,18 @@ int main(void)
 		while (ones < 58)
 		{
 			if (tens < ones)
+			{
+				putchar(tens);
+				putchar(ones);
+				if (tens != 56 || ones != 57)
 				{
-					putchar(tens);
-					putchar(ones);
-					if (tens != 56 || ones != 57)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-					ones++;
+					putchar(',');
+					putchar(' ');
 				}
-				else
-					ones++;
+				ones++;
+			}
+			else
+				ones++;
 		}
 		tens++;
 	}
