@@ -4,44 +4,41 @@
 /**
  * times_table - print times table
  *
- * Description: Print a times table, using 9
- * Return: Always 0.
+ * Description: print 9*9 times table
+ * Return: none
  */
 void times_table(void)
 {
-	int x = 0;
-	int y;
-	int z;
+	int product;
+	int i;
+	int j;
 
-	while (x < 10)
+	i = 0;
+
+	while (i < 10)
 	{
-		y = 0;
-		while (y < 10)
+		j = 0;
+		while (j < 10)
 		{
-			z = x * y;
-
-			if (y != 0)
+			product = j * i;
+			if (product > 9)
+			{
+				_putchar(product / 10 + '0');
+				_putchar(product % 10 + '0');
+			}
+			else
+			{
+				_putchar(' ');
+				_putchar(product + '0');
+			}
+			if (j != 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
-			if (z < 10 && y != 0)
-			{
-				_putchar(' ');
-				_putchar('0' + z);
-			}
-			else if (z > 9)
-			{
-				_putchar('0' + (z / 10));
-				_putchar('0' + (z % 10));
-			}
-			else
-			{
-				_putchar('0' + z);
-			}
-			y++;
+			j++;
 		}
-		x++;
+		i++;
 		_putchar('\n');
 	}
 }

@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - Incoming
+ * main - putchar function
  *
- * Description: Printing "Holberton" using created library file.
+ * Description: prints "Holberton"
  * Return: 0
  */
 int main(void)

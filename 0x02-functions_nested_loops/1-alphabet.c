@@ -1,20 +1,21 @@
 #include "holberton.h"
 
+
 /**
- * print_alphabet - Print alphabet.
+ * print_alphabet - function that prints alphabet
  *
  * Return: None
  */
 void print_alphabet(void)
 {
-	char a;
+	int alpha;
 
-	a = 'a';
+	alpha = 'a';
 
-	while (a <= 'z')
+	while (alpha < 'z' + 1)
 	{
-		_putchar(a);
-		a++;
+		_putchar(alpha);
+		alpha++;
 	}
 	_putchar('\n');
 }

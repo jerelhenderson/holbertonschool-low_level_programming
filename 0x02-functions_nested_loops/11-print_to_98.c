@@ -1,37 +1,35 @@
 #include <stdio.h>
+#include "holberton.h"
 
 
 /**
- * print_to_98 - 24
+ * print_to_98 - print natural numbers to 98
  *
- *@n: prints natural numbers up/down to 98
- * Return: Not sure yet.
+ * @n: starting num
+ * Return: none
  */
 void print_to_98(int n)
 {
-	if (n > 98)
+	if (n > 97)
 	{
-		while (n >= 98)
+		while (n != 97)
 		{
 			printf("%d", n);
-			if (n != 98)
-			{
-				printf(", ");
-			}
 			n--;
+			if (n != 97)
+				printf(", ");
 		}
+		putchar('\n');
 	}
-	else
+	else if (n < 99)
 	{
-		while (n <= 98)
+		while (n != 99)
 		{
 			printf("%d", n);
-			if (n != 98)
-			{
-				printf(", ");
-			}
 			n++;
+			if (n != 99)
+				printf(", ");
 		}
+		putchar('\n');
 	}
-	putchar('\n');
 }

@@ -2,10 +2,10 @@
 
 
 /**
- * add - add two integers
+ * add - add two ints
  *
- *@x: first int
- *@y: second int
+ *@x: int one
+ *@y: int two
  * Return: 0
  */
 int add(int x, int y)

@@ -2,20 +2,16 @@
 
 
 /**
- * _abs - Print absolute value.
+ * _abs - prints absolute value
  *
- *@n: Number before conversion.
- * Return: Number.
+ * @n: num before conversion
+ * Return: num
  */
 int _abs(int n)
 {
 	if (n >= 0)
-	{
-		return (n);
-	}
+		return n;
 	else
-	{
 		n = n * -1;
-		return (n);
-	}
+	return n;
 }

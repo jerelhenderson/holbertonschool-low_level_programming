@@ -2,29 +2,31 @@
 
 
 /**
- * jack_bauer - 24
+ * jack_bauer - print every minute of the day
  *
- * Description: Prints seconds in 00:00 format
- * Return: Not sure yet.
+ * Description: prints every minute from 00:00 - 23:59
+ * Return: none
  */
 void jack_bauer(void)
 {
-	int h = 0;
-	int m;
+	int hr;
+	int min;
 
-	while (h < 24)
+	hr = 0;
+
+	while (hr < 24)
 	{
-		m = 0;
-		while (m < 60)
+		min = 0;
+		while (min < 60)
 		{
-			_putchar(h / 10 + '0');
-			_putchar(h % 10 + '0');
+			_putchar(hr / 10 + '0');
+			_putchar(hr % 10 + '0');
 			_putchar(':');
-			_putchar(m / 10 + '0');
-			_putchar(m % 10 + '0');
+			_putchar(min / 10 + '0');
+			_putchar(min % 10 + '0');
+			min++;
 			_putchar('\n');
-			m++;
 		}
-		h++;
+		hr++;
 	}
 }
