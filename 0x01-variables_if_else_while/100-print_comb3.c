@@ -2,9 +2,9 @@
 
 
 /**
- * main - print base10
+ * main - print number combos
  *
- * Description: print single digit nums from 0 in base10
+ * Description: print all double digit number combinations
  * Return: 0
  */
 int main(void)

@@ -2,9 +2,9 @@
 
 
 /**
- * main - print base10
+ * main - print numbers
  *
- * Description: print single digit nums from 0 in base10
+ * Description: print numbers from 00 to 99
  * Return: 0
  */
 int main(void)
