@@ -1,9 +1,13 @@
 #ifndef HOLBERTON
 #define HOLBERTON
 
+/* standard library */
 #include <stdio.h>
 
+/* putchar equivalent function */
 int _putchar(char c);
+
+/*functions */
 int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
