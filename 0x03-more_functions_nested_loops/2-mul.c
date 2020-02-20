@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * mul - checks for digits from 0 - 9
+ * mul - multiply two ints
  *
- *@a: integer 1
- *@b: integer 2
- * Return: 1 if true, 0 if false
+ * @a: int 1
+ * @b: int 2
+ * Return: 1 if yay, 0 if nay
  */
 int mul(int a, int b)
 {

@@ -1,30 +1,29 @@
-#include <stdio.h>
+#include "holberton.h"
+
 
 /**
- * main - print some numbers, excluding some
+ * main - print numbers
  *
- * Description: Solve this "Fizz Buzz" thing
+ * Description: print nums 1 - 100, 3-multiples Fizz, 5-multiples Buzz, 3/5-multiples FizzBuzz
  * Return: 0
  */
 int main(void)
 {
-	int i = 1;
+	int i;
 
-	while (i <= 100)
+	i = 1;
+
+	while (i < 101)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
-			printf("FizzBuzz");
-		else if (i % 3 == 0)
-			printf("Fizz");
+		if (i % 3 == 0)
+			printf("Fizz ");
 		else if (i % 5 == 0)
-			printf("Buzz");
+			printf("Buzz ");
+		else if (i % 3 == 0 && i % 5 == 0)
+			printf("FizzBuzz ");
 		else
-			printf("%d", i);
-		if (i != 100)
-			printf(" ");
+			printf("%d ", i);
 		i++;
 	}
-	printf("\n");
-
 	return (0);
 }

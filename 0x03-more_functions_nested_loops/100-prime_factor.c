@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "holberton.h"
 
 
 /**
@@ -9,23 +9,19 @@
  */
 int main(void)
 {
-	long num = 612852475143;
-	long div = 2;
-	long big;
+	long num = 1231952; /* 612852475143; */
+	int i;
 
-	big = 2;
-	while (num > 1)
+	i = 2;
+
+	while (num != 1)
 	{
-		if (num % div == 0)
+		while (num % i == 0)
 		{
-			num = num / div;
-			if (big < div)
-				big = div;
+			num = num / i;
 		}
-
-		else
-			div++;
+		i++;
 	}
-	printf("%lu\n", big);
+	printf("%d\n", i - 1);
 	return (0);
 }

@@ -1,17 +1,21 @@
 #include "holberton.h"
 
 /**
- * print_line - straight line
+ * print_line - draw line
  *
  *@n: number of times n prints
  * Return: None
  */
 void print_line(int n)
 {
-	while (n > 0)
+	int i;
+
+	i = 0;
+
+	while (i < n)
 	{
 		_putchar('_');
-		n--;
+		i++;
 	}
 	_putchar('\n');
 }
