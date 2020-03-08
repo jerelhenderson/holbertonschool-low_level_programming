@@ -4,7 +4,8 @@
 /**
  * main - print numbers
  *
- * Description: print nums 1 - 100, 3-multiples Fizz, 5-multiples Buzz, 3/5-multiples FizzBuzz
+ * Description: print nums 1 - 100
+ * 3-multiples Fizz, 5-multiples Buzz, 3/5-multiples FizzBuzz
  * Return: 0
  */
 int main(void)
