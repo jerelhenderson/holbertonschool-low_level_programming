@@ -2,9 +2,9 @@
 
 
 /**
- * print_rev - print string in reverse
+ * print_rev - print reversed string
  *
- * @s: character type
+ * @s: given string
  * Return: None
  */
 
@@ -13,10 +13,13 @@ void print_rev(char *s)
 	int i;
 
 	i = 0;
+
 	while (s[i] != '\0')
 		i++;
-	i--;
-	while (i >= 0)
-		_putchar(s[i--]);
+	while (i != -1)
+	{
+		_putchar(s[i]);
+		i--;
+	}
 	_putchar('\n');
 }

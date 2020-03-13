@@ -1,9 +1,10 @@
 #include "holberton.h"
 
+
 /**
- * reset_to_98 - update value function
+ * reset_to_98 - update function value
  *
- *@n: integer type
+ * @n: integer type
  * Return: None
  */
 void reset_to_98(int *n)

@@ -1,34 +1,27 @@
 #include "holberton.h"
 
+
 /**
- * rev_string - return reverse string
+ * rev_string - return reversed string
  *
- *@s: character type
+ *@s: given string
  * Return: None
  */
 void rev_string(char *s)
 {
-	int count;
-	int temp1;
-	int doggy;
-	char temp2;
+	int rev_cnt = 0;
+	int fwd_cnt = 0;
+	char tmp;
 
-	count = 0;
-	while (s[count])
+	while (s[rev_cnt] != '\0')
+		rev_cnt++;
+	rev_cnt--;
+	while (rev_cnt > fwd_cnt)
 	{
-		count++;
-	}
-
-	temp1 = count / 2;
-	doggy = count - 1;
-	count = 0;
-
-	while (count < temp1)
-	{
-		temp2 = s[doggy];
-		s[doggy] = s[count];
-		s[count] = temp2;
-		count++;
-		doggy--;
+		tmp = s[fwd_cnt];
+		s[rev_cnt] = s[rev_cnt];
+		s[rev_cnt] = tmp;
+		rev_cnt--;
+		fwd_cnt++;
 	}
 }
