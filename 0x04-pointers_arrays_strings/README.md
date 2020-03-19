@@ -9,7 +9,7 @@ This introductory C programming language project covers
 * strings and how to manipulate them
 
 ### Requirements
-* Ubunto 14.04 LTS
+* Ubuntu 14.04 LTS
 * gcc 4.8.4
 
 ### File List

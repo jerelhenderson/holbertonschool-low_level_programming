@@ -27,5 +27,3 @@ This introductory C programming language project covers
 | 8-print_base16.c	  | prints all numbers of base16 in lowercase 	       	     |
 | 9-print_comb.c	  | prints all possible combos of single digit numbers	     |
 | 10-print_comb2.c	  | prints numbers from 00 to 99  	       		     |
-| 100-print_comb3.c	  | prints all combinations of two digit numbers from 00 to 99 |
-| 101-print_comb4.c	  | prints all combinations of three digit numbers from 000 to 999

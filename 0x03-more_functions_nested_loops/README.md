@@ -10,7 +10,7 @@ This introductory C programming language project covers
 * scope of variables
 
 ### Requirements
-* Ubunto 14.04 LTS
+* Ubuntu 14.04 LTS
 * gcc 4.8.4
 
 ### File List
