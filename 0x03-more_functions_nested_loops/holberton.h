@@ -7,7 +7,7 @@
 /* putchar equivalent function */
 int _putchar(char c);
 
-/*functions */
+/* functions */
 int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
