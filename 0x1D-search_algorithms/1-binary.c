@@ -33,7 +33,7 @@ int binary_search(int *array, size_t size, int value)
 			return (mid);
 		else if (array[mid] >= value)
 		{
-		        mid = mid - 1;
+			mid = mid - 1;
 			end = mid;
 		}
 		else if (value >= array[mid])
@@ -49,6 +49,7 @@ int binary_search(int *array, size_t size, int value)
 /**
  * search_array - function searches and prints array
  *
+ * @array: given array
  * @beg: beginning of array sequence
  * @end: end of array sequence
  */
