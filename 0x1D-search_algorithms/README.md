@@ -14,14 +14,10 @@ This introductory C programming language project covers
 ### File List
 | Program	  | Description						     |
 | --------------- |:--------------------------------------------------------:|
-| 0-linear.c  | function searchs for value in array of integers using Linear search algo |
-| 1-last_digit      | assigns random num to var upon execution, prints last digit of num stored 	 |
-| 2-print_alphabet.c	  | prints alphabet in lowercase |
-| 3-print_alphabets.c 	  | prints alphabet in lowercase, then uppercase	     		     |
-| 4-print_alphabet.c	  | prints alphabet in lowercase, with 'q' and 'e' omitted	     |
-| 5-print_numbers.c	  | prints all single digit numbers of base 10 starting from 0		     |
-| 6-print_numberz.c	  | prints all single digit numbers of base 10 starting from 0 (with putchar)    |
-| 7-print_tebahpla.c	  | prints lowercase alphabet in reverse  |
-| 8-print_base16.c	  | prints all numbers of base16 in lowercase 	       	     |
-| 9-print_comb.c	  | prints all possible combos of single digit numbers	     |
-| 10-print_comb2.c	  | prints numbers from 00 to 99  	       		     |
+| 0-linear.c  | function searches for value in array of integers using Linear search algorithm |
+| 1-binary.c      | function searches for value in sort array of integers using Binary search algorithm |
+| 2-O	  | time complexity linear search |
+| 3-O 	  | space complexity (worst case) iterative linear search algorithm |
+| 4-O	  | time complexity (worst case) of binary search |
+| 5-O 	  | space complexity (worst case) of binary search |
+| 6-O	  | space complexity of for loop algorithm    |
