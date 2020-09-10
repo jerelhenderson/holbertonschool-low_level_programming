@@ -1,3 +1,3 @@
 #!/bin/bash
-/* -S preprocesses and compiles script, but doesn\'t link */
-gcc -S $CFILE
+# -S preprocesses and compiles script, but doesn\'t link
+gcc -C $CFILE
