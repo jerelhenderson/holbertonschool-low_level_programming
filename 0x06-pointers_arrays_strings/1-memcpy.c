@@ -3,23 +3,21 @@
 
 /**
  * _memcpy - copy memory
- * @dest: copy to
- * @src: copy from
- * @n: integer type
- * Return: pointer to `dest`
+ *
+ * @dest: memory area to copy to
+ * @src: memory area to copy from
+ * @n: bytes to copy
+ * Return: dest
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	char *ptr;
+	unsigned int i = 0;
 
-	ptr = dest;
-	while (n > 0)
+	while (n != 0)
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		dest[i] = src[i];
+		i++;
 		n--;
 	}
-
-	return (ptr);
+	return (dest);
 }

@@ -2,34 +2,37 @@
 
 
 /**
- * _strspn - search a string for bytes
- * @s: char string
- * @accept: char bytes
- * Return: bytes in 's'
+ * _strspn - get length of a prefix substring
+ *
+ * @s: string to be checked
+ * @accept: characters to check for
+ * Return: number of bytes in from 'accept' in 's'
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int length;
-	int index;
-	int counter;
+	int i, j;
+	int count;
 
-	length = 0;
-	counter = 0;
-	while (s[length] != '\0')
+	i = 0;
+	count = 0;
+
+	while (s[i] != '\0')
 	{
-		index = 0;
-		while (accept[index] != '\0')
+		j = 0;
+		while (accept[j] != '\0')
 		{
-			if (s[length] == accept[index])
+			if (s[i] == accept[j])
 			{
-				counter++;
+				count++;
 				break;
 			}
-			index++;
+			j++;
 		}
-		if (accept[index] == '\0')
+		if (accept[j] == '\0')
+		{
 			break;
-		length++;
+		}
+		i++;
 	}
-	return (counter);
+	return (count);
 }

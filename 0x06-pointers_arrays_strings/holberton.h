@@ -1,7 +1,13 @@
 #ifndef HOLBERTON
 #define HOLBERTON
 
+/* standard library */
+#include <stdio.h>
+
+/* putchar equivalent function */
 int _putchar(char c);
+
+/* functions */
 char *_memset(char *s, char b, unsigned int n);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_strchr(char *s, char c);

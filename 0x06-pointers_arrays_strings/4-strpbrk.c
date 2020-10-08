@@ -3,29 +3,33 @@
 
 /**
  * _strpbrk - search string for bytes
- * @s: string
+ *
+ * @s: string to search through
  * @accept: string to match
  * Return: point to byte in 's' that matches a byte in 'accept', or NULL
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int length, index;
-	char *p;
+	int i, j;
+	
+	char *pos;
 
-	length = 0;
-	while (s[length] != '\0')
+	i = 0;
+
+	while (*s != '\0')
 	{
-		index = 0;
-		while (accept[index] != '\0')
+		j = 0;
+		while (accept[j] != '\0')
 		{
-			if (accept[index] == s[length])
+			if (s[i] == accept[j])
 			{
-				p = &s[length];
-				return (p);
+				pos = s;
+				return (pos);
 			}
-			index++;
+			j++;
 		}
-		length++;
+		s++;
 	}
-	return (0);
+	return (NULL);
 }
+

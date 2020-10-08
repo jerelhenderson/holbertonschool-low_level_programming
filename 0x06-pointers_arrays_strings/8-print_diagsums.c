@@ -4,27 +4,29 @@
 
 /**
  * print_diagsums - print sum of two diagonals of a square matrix
- * @a: integers
- * @size: size
+ *
+ * @a: array of integers
+ * @size: size of the array
  * Return: None
  */
 void print_diagsums(int *a, int size)
 {
-	int row, col, sum1, sum2;
+	int i, j;
+	unsigned int sum1, sum2;
 
 	sum1 = 0;
 	sum2 = 0;
 
-	for (row = 0; row < size; row++)
+	for (i = 0; i < size; i++)
 	{
-		for (col = 0; col < size; col++)
+		for (j = 0; j < size; j++)
 		{
-			if (row == col)
-				sum1 = sum1 + *a;
-			if (col == size - 1 - row)
+			if (i == j)
+				sum1 = sum1 + *a;	
+			if (j == size - 1 - i)
 				sum2 = sum2 + *a;
 			a++;
 		}
 	}
-	printf("%d, %d\n", sum1, sum2);
+	printf("%u, %u\n", sum1, sum2);
 }

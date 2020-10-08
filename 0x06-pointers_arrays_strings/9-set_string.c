@@ -3,8 +3,9 @@
 
 /**
  * set_string - set value of pointer
- * @s: pointer-to-pointer
- * @to: char of pointer
+ *
+ * @s: double pointer receiving address 's1'
+ * @to: single pointer receiving 's0'
  */
 void set_string(char **s, char *to)
 {
