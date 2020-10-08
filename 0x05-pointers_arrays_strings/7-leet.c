@@ -24,7 +24,6 @@ char *leet(char *s)
 			if (s[i] == rpl[j])
 			{
 				s[i] = with[j];
-				continue;
 			}
 			j++;
 		}

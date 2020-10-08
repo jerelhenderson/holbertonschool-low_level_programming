@@ -11,37 +11,34 @@ char *cap_string(char *s)
 {
 	int i;
 	int j;
-	int delims[] = {'\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\0'};
+	int delims[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\0'};
 
 	i = 0;
 	j = 0;
 
 	while (s[i + 1] != '\0')
 	{
-		if (s[i] == 32)
-		{
-			i++;
-			if (s[i] >= 'a' && s[i] <= 'z')
-				s[i] = s[i] - 32;
-		}
-		if (s[i] == '\t')
+		if (s[i] == 32 || s[i] == '\t' || s[i] == '\n')
 		{
 			s[i] = ' ';
 			i++;
 			if (s[i] >= 'a' && s[i] <= 'z')
 				s[i] = s[i] - 32;
 		}
+
+		j = 0;
 		while (delims[j] != '\0')
 		{
 			if (s[i] == delims[j])
 			{
-				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
-					s[i + 1] = s[i + 1] - 32;
-				break;
+				i++;
+				if (s[i] == 32 || s[i] == '\t' || s[i] == '\n')
+					i++;
+				if (s[i] >= 'a' && s[i] <= 'z')
+					s[i] = s[i] - 32;
 			}
 			j++;
 		}
-		j = 0;
 		i++;
 	}
 	return (s);

@@ -10,19 +10,16 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i;
+	int i = 0;
+	int j = n - 1;
 	int tmp;
-	int m; /* holds `n` */
-
-	i = 0;
-	m = n;
-
-	while (i != m / 2)
+	
+	while (i < j)
 	{
-		tmp = a[i];
-		a[i] = a[n - 1];
-		a[n - 1] = tmp;
-		n--;
+		tmp = a[j];
+		a[j] = a[i];
+		a[i] = tmp;
+		j--;
 		i++;
 	}
 }
