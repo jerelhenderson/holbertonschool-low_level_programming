@@ -22,7 +22,7 @@ void print_diagsums(int *a, int size)
 		for (j = 0; j < size; j++)
 		{
 			if (i == j)
-				sum1 = sum1 + *a;	
+				sum1 = sum1 + *a;
 			if (j == size - 1 - i)
 				sum2 = sum2 + *a;
 			a++;

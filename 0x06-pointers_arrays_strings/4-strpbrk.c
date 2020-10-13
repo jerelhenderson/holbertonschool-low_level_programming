@@ -11,7 +11,6 @@
 char *_strpbrk(char *s, char *accept)
 {
 	int i, j;
-	
 	char *pos;
 
 	i = 0;
