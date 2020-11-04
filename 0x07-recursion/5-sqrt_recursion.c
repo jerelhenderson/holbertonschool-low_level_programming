@@ -1,29 +1,36 @@
 #include "holberton.h"
 
+
+int square_it(int a, int b);
+
 /**
- * _sqrt_recursion - return square root
+ * _sqrt_recursion - return natural square root of number
  *
- * @n: integer type
- * Return: square root, or -1 if nah
+ * @n: received number
+ * Return: square root, or -1 if none
  */
 int _sqrt_recursion(int n)
 {
-	return (help(n, 1));
+	if (n < 1)
+		return (-1);
+	if (n == 1)
+		return (1);
+	else
+		return square_it(n, 1);
 }
 
 /**
- * help - help function
+ * square_it - performs recursion to get square root of 'n' 
  *
- * @c: integer type
- * @i: integer type
- * Return: square root, or -1 if nah
+ * @n: number to get square root of
+ * @i: number to stop dividing at
+ * Return: square root
  */
-int help(int n, int i)
+int square_it(int a, int b)
 {
-	if (i * i == n)
-		return (i);
-	else if (i * i > n)
+	if (b * b > a)
 		return (-1);
-	else
-		return (help(n, i + 1));
+	if (b * b == a)
+		return (b);
+	return square_it(a, b + 1);
 }

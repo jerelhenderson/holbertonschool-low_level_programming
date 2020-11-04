@@ -2,14 +2,18 @@
 
 
 /**
- * _strlen_recursion - write a function that returns string length
+ * _strlen_recursion - recursive function returns string length
  *
- * @s: character type
+ * @s: given string
  * Return: 0
  */
 int _strlen_recursion(char *s)
 {
 	if (*s != '\0')
-		return (1 + _strlen_recursion(s + 1));
+	{
+		int i = 1;
+
+		return (i + _strlen_recursion(++s));
+	}
 	return (0);
 }

@@ -2,10 +2,10 @@
 
 
 /**
- * _puts_recursion - write function
+ * _puts_recursion - print string using recursion
  *
- * @s: character type
- * Return:
+ * @s: given string
+ * Return: None
  */
 void _puts_recursion(char *s)
 {
