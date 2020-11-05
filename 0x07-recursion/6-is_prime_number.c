@@ -7,7 +7,7 @@ int prime_it(int n, int i);
  * is_prime_number - function finds prime number
  *
  * @n: given integer
- * Return: result of `prime_it` 
+ * Return: result of `prime_it`
  */
 int is_prime_number(int n)
 {

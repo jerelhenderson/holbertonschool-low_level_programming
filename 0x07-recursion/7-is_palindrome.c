@@ -4,7 +4,7 @@
 char *mover(char *string);
 int comparer(char *beg, char *end);
 
-/**  
+/**
   * is_palindrome - checks if string is a palindrome
   *
   * @s: given string
@@ -21,6 +21,7 @@ int is_palindrome(char *s)
   * mover - function moves pointer to end of string
   *
   * @string: given string
+  * Return: end of string
   */
 char *mover(char *string)
 {

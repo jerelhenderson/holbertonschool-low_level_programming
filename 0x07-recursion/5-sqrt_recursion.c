@@ -16,14 +16,14 @@ int _sqrt_recursion(int n)
 	if (n == 1)
 		return (1);
 	else
-		return square_it(n, 1);
+		return (square_it(n, 1));
 }
 
 /**
- * square_it - performs recursion to get square root of 'n' 
+ * square_it - performs recursion to get square root of 'n'
  *
- * @n: number to get square root of
- * @i: number to stop dividing at
+ * @a: number to get square root of
+ * @b: number to stop dividing at
  * Return: square root
  */
 int square_it(int a, int b)
@@ -32,5 +32,5 @@ int square_it(int a, int b)
 		return (-1);
 	if (b * b == a)
 		return (b);
-	return square_it(a, b + 1);
+	return (square_it(a, b + 1));
 }
