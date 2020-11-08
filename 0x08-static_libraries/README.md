@@ -12,5 +12,5 @@ static libraries and how to use them
 ### File List
 | Program         | Description                                              |
 | --------------- |:--------------------------------------------------------:|
-| libholberton.a, holberton.h | create static library `libholberton.a` containing functions from past projects |
+| libholberton.a | create static library `libholberton.a` containing functions from past projects |
 | create_static_lib.sh | createa script `create_static_lib.sh` that creates static library `liball.a` from \*.c in . |
