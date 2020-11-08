@@ -1,7 +1,13 @@
 #ifndef HOLBERTON
 #define HOLBERTON
 
+/*standard library */
+#include <stdio.h>
+
+/* putchar equivalent function */
 int _putchar(char c);
+
+/*functions*/
 int _islower(int c);
 int _isalpha(int c);
 int _abs(int n);
