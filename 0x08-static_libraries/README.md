@@ -14,5 +14,3 @@ static libraries and how to use them
 | --------------- |:--------------------------------------------------------:|
 | libholberton.a, holberton.h | create static library `libholberton.a` containing functions from past projects |
 | create_static_lib.sh | createa script `create_static_lib.sh` that creates static library `liball.a` from \*.c in . |
-| 2-strlen_recursion.c | function returns length of string |
-| 3-factorial.c | function return factorial of given number |
