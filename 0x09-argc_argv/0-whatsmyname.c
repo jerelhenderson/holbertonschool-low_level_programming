@@ -1,11 +1,11 @@
-#include <stdio.h>
+#include "holberton.h"
 
 
 /**
- * main - prints program name
+ * main - uses `argc` and `argv` to print program name
  *
- * @argc: counts arguments
- * @argv: argument array
+ * @argc: counts number of arguments
+ * @argv: given arguments
  * Return: 0
  */
 int main(int argc, char *argv[])

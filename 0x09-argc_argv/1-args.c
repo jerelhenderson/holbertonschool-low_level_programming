@@ -1,11 +1,11 @@
-#include <stdio.h>
+#include "holberton.h"
 
 
 /**
- * main - print the num of args you passed to it
+ * main - print number of passed arguments
  *
- * @argc: count arguments
- * @argv: argument array
+ * @argc: count number of arguments
+ * @argv: given arguments
  * Return: 0
  */
 int main(int argc, char *argv[])

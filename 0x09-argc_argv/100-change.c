@@ -1,54 +1,60 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "holberton.h"
+
+
+void calculator(int *total, int coin, int *count);
 
 /**
- * main - print minimum coins
+ * main - prints minimun number of coins to make change for given amount
  *
- * @argc: count arguments
- * @argv: argument array
- * Return: 1, or 0
+ * @argc: count number of arguments
+ * @argv: given argument
+ * Return: 1 if argc != 1, 0 if is argv[1] > 0
  */
 int main(int argc, char *argv[])
 {
-	int amount;
-	int count;
-
-	count = 0;
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	amount = atoi(argv[1]);
+	int amount = atoi(argv[1]);
+	int min_num = 0;
+
 	if (amount < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
-	while (amount >= 25)
-	{
-		count++;
-		amount -= 25;
-	}
-	while (amount >= 10)
-	{
-		count++;
-		amount -= 10;
-	}
-	while (amount >= 5)
-	{
-		count++;
-		amount -= 5;
-	}
-	while (amount >= 2)
-	{
-		count++;
-		amount -= 2;
-	}
+
+	if (amount >= 25)
+		calculator(&amount, 25, &min_num);
+	if (amount >= 10)
+		calculator(&amount, 10, &min_num);
+	if (amount >= 5)
+		calculator(&amount, 5, &min_num);
+	if (amount >= 2)
+		calculator(&amount, 2, &min_num);
 	if (amount == 1)
-		count++;
-	printf("%d\n", count);
+		calculator(&amount, 1, &min_num);
+
+	printf("%d\n", min_num);
 
 	return (0);
+}
+
+/**
+  * calculator - calculates the amount based on given input
+  *
+  * @total: amount left to calculate
+  * @coin: coin to subtract from amount
+  * @count: counted coins
+  */
+void calculator(int *total, int coin, int *count)
+{
+	while (*total >= coin)
+	{
+		*total -= coin;
+		*count = *count + 1;
+	}
 }

@@ -1,35 +1,42 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "holberton.h"
 
+int error_msg(void);
 
 /**
- * main - print result
+ * main - write program that adds two numbers
  *
- * @argc: count arguments
- * @argv: argument array
- * Return: 1 if error, 0 is nah
+ * @argc: count number of arguments
+ * @argv: given argument
+ * Return: 0, or 1 if more or less than two arguments received
  */
 int main(int argc, char *argv[])
 {
-	int total, i;
+	int res = 0;
+	int i = 1;
 	char *p;
-	int num;
 
-	total = 0;
-	if (argc > 1)
+	if (argc < 3)
+		return (error_msg());
+
+	while (i < argc)
 	{
-		for (i = 1; argv[i]; i++)
-		{
-			num = strtol(argv[i], &p, 10);
-			if (!*p)
-				total += num;
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
+		res = res + strtol(argv[i], &p, 10);
+		if (*p != '\0')
+			return (error_msg());
+		i++;
 	}
-	printf("%d\n", total);
+	printf("%d\n", res);
+
 	return (0);
+}
+
+/**
+  * error_msg - prints error message if incorrect input is given
+  *
+  * Return: 1
+  */
+int error_msg(void)
+{
+	printf("Error\n");
+	return (1);
 }

@@ -1,25 +1,28 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "holberton.h"
+
 
 /**
- * main - print result
+ * main - write program that multiplies two numbers
  *
- * @argc: count arguments
- * @argv: argument array
- * Return: 0, or 1
+ * @argc: count number of arguments
+ * @argv: given argument
+ * Return: 0, or 1 if more or less than two arguments received
  */
 int main(int argc, char *argv[])
 {
-	int a, b;
+	int a, b, res;
 
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
 	a = atoi(argv[1]);
 	b = atoi(argv[2]);
-	printf("%d\n", a * b);
+	res = a * b;
+
+	printf("%d\n", res);
 
 	return (0);
 }
