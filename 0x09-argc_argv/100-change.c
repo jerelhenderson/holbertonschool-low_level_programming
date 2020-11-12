@@ -12,14 +12,16 @@ void calculator(int *total, int coin, int *count);
  */
 int main(int argc, char *argv[])
 {
+	int amount;
+	int min_num = 0;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	int amount = atoi(argv[1]);
-	int min_num = 0;
+	amount = atoi(argv[1]);
 
 	if (amount < 0)
 	{

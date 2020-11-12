@@ -1,5 +1,6 @@
 #include "holberton.h"
 
+
 int error_msg(void);
 
 /**
@@ -16,7 +17,7 @@ int main(int argc, char *argv[])
 	char *p;
 
 	if (argc < 3)
-		return (error_msg());
+		return (printf("0\n"));
 
 	while (i < argc)
 	{
