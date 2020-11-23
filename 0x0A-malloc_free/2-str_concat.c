@@ -1,53 +1,55 @@
 #include "holberton.h"
-#include <stdlib.h>
-#include <stdio.h>
 
+
+int _strlen(char *s);
 
 /**
- * str_concat - concactenates two strings
+ * str_concat - function concatenates two strings
  *
- * @s1: first string
- * @s2: second string
- * Return: pointer to concactenated string
+ * @s1: first given string
+ * @s2: second given string
+ * Return: pointer to allowed memory space containing concatenated `s1` + `s2`, or NULL
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *space;
-	int idx1, idx2;
-	int cpy1;
+	char *ptr;
+	int len;
+	int i, j;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	idx1 = 0;
-	idx2 = 0;
-	while (s1[idx1] != '\0')
-		idx1++;
-	while (s2[idx2] != '\0')
-		idx2++;
+	len = _strlen(s1) + _strlen(s2);
 
-	space = malloc((idx1 + idx2) * sizeof(char));
-	if (space == NULL)
+	ptr = malloc(len * sizeof(char));
+	if (ptr == NULL)
 		return (NULL);
-
-        cpy1 = 0;
-	idx1 = 0;
-	while (s1[idx1] != '\0')
+	
+	for (i = 0; s1[i] != '\0'; i++)
+		ptr[i] = s1[i];
+	for (j = 0; s2[j] != '\0'; j++)
 	{
-		space[cpy1] = s1[idx1];
-		idx1++;
-		cpy1++;
+		ptr[i] = s2[j];
+		i++;
 	}
+	ptr[i] = '\0';
+		
+	return (ptr);
+}
 
- 	idx1 = 0;
-	while (s2[idx1] != '\0')
-	{
-	       space[cpy1] = s2[idx1];
-	       idx1++;
-	       cpy1++;
-	}
-	space[cpy1] = '\0';
-	return (space);
+/**
+ * _strlen - return length of string
+ *
+ * @s: given string
+ * Return: string length
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
