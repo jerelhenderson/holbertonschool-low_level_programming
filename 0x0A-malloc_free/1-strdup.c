@@ -5,7 +5,7 @@
  * _strdup - returns pointer to newly allocated memory space
  *
  * @str: given string
- * Return: pointer to duplicated string, or NULL 
+ * Return: pointer to duplicated string, or NULL
  */
 char *_strdup(char *str)
 {
@@ -13,10 +13,13 @@ char *_strdup(char *str)
 	int i;
 	int len = 0;
 
+	if (str == NULL)
+		return (NULL);
+
 	for (i = 0; str[i] != '\0'; i++)
 		len++;
 
-	ptr = malloc(len * sizeof(char));
+	ptr = malloc((len * sizeof(char)) + 1);
 	if (ptr == NULL)
 		return (NULL);
 
