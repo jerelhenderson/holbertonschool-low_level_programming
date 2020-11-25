@@ -14,7 +14,6 @@ int _strlen(char *s);
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int i, j, len;
-	signed int n_copy = n;
 	char *ptr;
 
 	if (s1 == NULL)
@@ -22,12 +21,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	if (n_copy >= _strlen(s2))
+	if ((signed int)n >= _strlen(s2))
 		len = _strlen(s1) + _strlen(s2) + 1;
 	else
 		len = _strlen(s1) + n;
 
-	ptr = malloc(len * sizeof(*ptr));
+	ptr = malloc((len * sizeof(*ptr)) + 1);
 	if (ptr == NULL)
 		return (NULL);
 
