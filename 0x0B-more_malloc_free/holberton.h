@@ -1,7 +1,14 @@
 #ifndef HOLBERTON
 #define HOLBERTON
 
+/* standard libraries */
+#include <stdio.h>
+#include <stdlib.h>
+
+/* putchar equivalent function */
 int _putchar(char c);
+
+/* functions */
 int _strlen(char *s);
 void *malloc_checked(unsigned int b);
 char *string_nconcat(char *s1, char *s2, unsigned int n);

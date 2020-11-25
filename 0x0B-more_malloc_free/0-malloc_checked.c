@@ -1,12 +1,11 @@
 #include "holberton.h"
-#include <stdlib.h>
 
 
 /**
- * malloc_checked - allocate memory
+ * malloc_checked - allocate memory using `malloc`
  *
- * @b: allocated var
- * Return: pointer
+ * @b: memory size to malloc
+ * Return: pointer to malloc'd memory
  */
 void *malloc_checked(unsigned int b)
 {
