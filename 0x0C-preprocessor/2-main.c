@@ -2,9 +2,9 @@
 
 
 /**
- * main - print compiled file's name
+ * main - print name of file compiled from
  *
- * Return: Nothing
+ * Return: 0
  */
 int main(void)
 {
