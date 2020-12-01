@@ -6,13 +6,14 @@
 #include <stdio.h>
 
 /**
-  * dog - structure type 
+  * dog - structure type
   *
-  * @name: name member 
-  * @age: age member 
-  * @owner: owner member 
+  * @name: name member
+  * @age: age member
+  * @owner: owner member
   */
-typedef struct dog {
+typedef struct dog
+{
 	char *name;
 	float age;
 	char *owner;

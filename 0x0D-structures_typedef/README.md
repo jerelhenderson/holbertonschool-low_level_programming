@@ -15,4 +15,5 @@ structures, typdef, and how to use them
 | dog.h | Define new type `struct dog` |
 | 1-init_dog.c | function initializes variable type `struct dog` |
 | 2-print_dog.c | function prints `struct dog` |
-| 3-new_dog.c | function creates new "dog" |
+| 4-new_dog.c | function creates new "dog" |
+| 5-free_dog.c | function frees malloc'd "dog" |
