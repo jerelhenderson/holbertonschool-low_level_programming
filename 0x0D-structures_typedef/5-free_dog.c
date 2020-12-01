@@ -1,9 +1,8 @@
 #include "dog.h"
-#include <stdlib.h>
 
 
 /**
- * free_dog - free doggies
+ * free_dog - free space malloc'd in 4-new_dog.c
  *
  * @d: pointer to 'struct dog'
  */
