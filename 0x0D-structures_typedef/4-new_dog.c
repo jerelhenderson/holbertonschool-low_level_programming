@@ -16,11 +16,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	struct dog *puppy;
 	char *puppy_name, *puppy_owner;
-	int len_name, len_owner;	
+	int len_name, len_owner;
 
 	len_name = _strlen(name);
 	len_owner = _strlen(owner);
-	
+
 	puppy = malloc(sizeof(dog_t));
 	if (puppy == NULL)
 	{
@@ -42,7 +42,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(puppy);
 		return (NULL);
 	}
-	
+
 	_strcpy(puppy_name, name, &len_name);
 	_strcpy(puppy_owner, owner, &len_owner);
 
@@ -73,7 +73,7 @@ int _strlen(char *s)
  *
  * @dest: copy destination
  * @src: string to copy
- * *length: length of string
+ * @length: length of string
  * Return: pointer to @dest
  */
 char *_strcpy(char *dest, char *src, int *length)
