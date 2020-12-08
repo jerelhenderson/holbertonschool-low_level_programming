@@ -2,10 +2,10 @@
 
 
 /**
- * get_op_func - pointer to function
+ * get_op_func - selects correct arithmatic function to perform operation
  *
- * @s: program argument
- * Return: pointer to function of correspending operator
+ * @s: argument passed to program
+ * Return: pointer to function of corresponding operator
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -22,7 +22,10 @@ int (*get_op_func(char *s))(int, int)
 	i = 0;
 
 	while (ops[i].op != NULL)
+	{
 		if (*(ops[i].op) == *s)
 			return (ops[i].f);
+		i++;
+	}
 	return (NULL);
 }

@@ -2,11 +2,10 @@
 
 
 /**
- * print_name - function that prints name
+ * print_name - function prints name
  *
- * @name: pointer to character
+ * @name: "name" to copy
  * @f: pointer to function
- * Return: check for NULL
  */
 void print_name(char *name, void (*f)(char *))
 {

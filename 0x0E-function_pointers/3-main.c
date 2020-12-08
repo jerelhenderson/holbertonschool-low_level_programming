@@ -1,10 +1,10 @@
 #include "3-calc.h"
 
 /**
- * main - performs operations
+ * main - receives arguments to pass to 3-get_op_function.c
  *
- * @argc: count arguments
- * @argv: argument array
+ * @argc: count number of arguments
+ * @argv: array of given arguments
  * Return: result of operation
  */
 int main(int argc, char *argv[])
@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
 
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
+
 	if ((*argv[2] == '%' || *argv[2] == '/') && b == 0)
 	{
 		printf("Error\n");
