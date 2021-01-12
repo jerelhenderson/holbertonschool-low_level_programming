@@ -17,11 +17,10 @@ void print_all(const char * const format, ...)
 	};
 	int i, j;
 	va_list args;
-	char *separator;
+	char *sep = "";
 
 	va_start(args, format);
 	i = 0;
-	separator = ", ";
 
 	while (format != NULL && format[i] != '\0')
 	{
@@ -30,9 +29,10 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *(types[j].type))
 			{
+				printf("%s", sep);
 				types[j].f(args);
 				if ((format[i + 1]) != '\0')
-					printf("%s", separator);
+					sep = ", ";
 				break;
 			}
 			j++;
