@@ -2,7 +2,7 @@
 
 
 /**
- * print_all - prints anything
+ * print_all - prints anything given
  *
  * @format: types of passed args
  */
@@ -44,33 +44,10 @@ void print_all(const char * const format, ...)
 }
 
 /**
- * print_char - prints character
- *
- * @args: received argument from `va_list`
- */
-
-void print_char(va_list args)
-{
-	printf("%c", va_arg(args, int));
-}
-
-/**
- * print_num - prints number
- *
- * @args: received argument from `va_list`
- */
-
-void print_num(va_list args)
-{
-	printf("%d", va_arg(args, int));
-}
-
-/**
  * print_string - prints string
  *
  * @args: received argument from `va_list`
  */
-
 void print_string(va_list args)
 {
 	char *str;
@@ -83,11 +60,33 @@ void print_string(va_list args)
 }
 
 /**
+ * print_num - prints number
+ *
+ * @args: received argument from `va_list`
+ */
+void print_num(va_list args)
+{
+	printf("%d", va_arg(args, int));
+}
+
+
+
+/**
+ * print_char - prints character
+ *
+ * @args: received argument from `va_list`
+ */
+void print_char(va_list args)
+{
+	printf("%c", va_arg(args, int));
+}
+
+
+/**
  * print_float - prints float
  *
  * @args: received argument from `va_list`
  */
-
 void print_float(va_list args)
 {
 	printf("%f", va_arg(args, double));
