@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 		{"i", print_num},
 		{"f", print_float},
 		{"s", print_string},
-		{'\0'}
+		{NULL, NULL}
 	};
 	int i, j;
 	va_list args;
@@ -23,10 +23,10 @@ void print_all(const char * const format, ...)
 	i = 0;
 	separator = ", ";
 
-	while (format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
-		while (types[j].type != '\0')
+		while (types[j].type != NULL)
 		{
 			if (format[i] == *(types[j].type))
 			{
