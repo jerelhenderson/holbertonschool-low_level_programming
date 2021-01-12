@@ -1,79 +1,80 @@
 #include "variadic_functions.h"
 
+
 /**
- * print_all - print anything
+ * print_all - prints anything
  *
- * @format: list of types of arguments
+ * @format: types of passed args
  */
 void print_all(const char * const format, ...)
 {
 	types_t types[] = {
-		{"c", print_character},
-		{"i", print_number},
+		{"c", print_char},
+		{"i", print_num},
 		{"f", print_float},
 		{"s", print_string},
 		{'\0'}
 	};
-	int itr1, itr2;
-	va_list arguments;
+	int i, j;
+	va_list args;
 	char *separator;
 
-	va_start(arguments, format);
-	itr1 = 0;
+	va_start(args, format);
+	i = 0;
 	separator = ", ";
 
-	while (format[itr1] != '\0')
+	while (format[i] != '\0')
 	{
-		itr2 = 0;
-		while (types[itr2].type != '\0')
+		j = 0;
+		while (types[j].type != '\0')
 		{
-			if (format[itr1] == *(types[itr2].type))
+			if (format[i] == *(types[j].type))
 			{
-				types[itr2].f(arguments);
-				if ((format[itr1 + 1]) != '\0')
+				types[j].f(args);
+				if ((format[i + 1]) != '\0')
 					printf("%s", separator);
 			}
-			itr2++;
+			j++;
 		}
-		itr1++;
+		i++;
 	}
 	printf("\n");
-	va_end(arguments);
+	va_end(args);
 }
 
 /**
- * print_character - print character
+ * print_char - prints character
  *
- * @arguments: structure definitions
+ * @args: received argument from `va_list`
  */
 
-void print_character(va_list arguments)
+void print_char(va_list args)
 {
-	printf("%c", va_arg(arguments, int));
+	printf("%c", va_arg(args, int));
 }
 
 /**
- * print_number - print number
+ * print_num - prints number
  *
- * @arguments: structure definition
+ * @args: received argument from `va_list`
  */
 
-void print_number(va_list arguments)
+void print_num(va_list args)
 {
-	printf("%d", va_arg(arguments, int));
+	printf("%d", va_arg(args, int));
 }
 
 /**
- * print_string - print string
+ * print_string - prints string
  *
- * @arguments: structure definition
+ * @args: received argument from `va_list`
  */
 
-void print_string(va_list arguments)
+void print_string(va_list args)
 {
 	char *str;
 
-	str = va_arg(arguments, char *);
+	str = va_arg(args, char *);
 
 	if (str == NULL)
 		printf("(nil)");
@@ -81,12 +82,12 @@ void print_string(va_list arguments)
 }
 
 /**
- * print_float - print string
+ * print_float - prints float
  *
- * @arguments: structure definition
+ * @args: received argument from `va_list`
  */
 
-void print_float(va_list arguments)
+void print_float(va_list args)
 {
-	printf("%f", va_arg(arguments, double));
+	printf("%f", va_arg(args, double));
 }
