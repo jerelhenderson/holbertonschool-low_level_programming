@@ -33,6 +33,7 @@ void print_all(const char * const format, ...)
 				types[j].f(args);
 				if ((format[i + 1]) != '\0')
 					printf("%s", separator);
+				break;
 			}
 			j++;
 		}
