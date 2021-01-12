@@ -2,49 +2,49 @@
 
 
 /**
- * print_all - prints anything given
+ * print_all - types anything given
  *
  * @format: types of passed args
  */
 void print_all(const char * const format, ...)
 {
-	types_t types[] = {
-		{"c", print_char},
-		{"i", print_num},
-		{"f", print_float},
-		{"s", print_string},
-		{NULL, NULL}
-	};
-	int i, j;
-	va_list args;
-	char *sep = "";
+	 types_t types[] = {
+		 {"c", print_char},
+		 {"i", print_num},
+		 {"f", print_float},
+		 {"s", print_string},
+		 {NULL, NULL}
+	 };
+	 va_list args;
+	 int i, j;
+	 char *sep;
 
-	va_start(args, format);
-	i = 0;
-
-	while (format != NULL && format[i] != '\0')
-	{
-		j = 0;
-		while (types[j].type != NULL)
-		{
-			if (format[i] == *(types[j].type))
-			{
-				printf("%s", sep);
-				types[j].f(args);
-				if ((format[i + 1]) != '\0')
-					sep = ", ";
-				break;
-			}
-			j++;
-		}
-		i++;
-	}
-	printf("\n");
-	va_end(args);
+	 va_start(args, format);
+	 sep = "";
+	 i = 0;
+	 while (format != NULL && format[i] != '\0')
+		 {
+			 j = 0;
+			 while (types[j].type != NULL)
+				 {
+					 /* only compare current format with types type once */
+					 if (format[i] == *(types[j].type))
+						 {
+							 printf("%s", sep);
+							 types[j].f(args);
+							 sep = ", ";
+							 break;
+						 }
+					 j++;
+				 }
+			 i++;
+		 }
+	 printf("\n");
+	 va_end(args);
 }
 
 /**
- * print_string - prints string
+ * print_string - types string
  *
  * @args: received argument from `va_list`
  */
@@ -60,7 +60,7 @@ void print_string(va_list args)
 }
 
 /**
- * print_num - prints number
+ * print_num - types number
  *
  * @args: received argument from `va_list`
  */
@@ -69,10 +69,8 @@ void print_num(va_list args)
 	printf("%d", va_arg(args, int));
 }
 
-
-
 /**
- * print_char - prints character
+ * print_char - types character
  *
  * @args: received argument from `va_list`
  */
@@ -81,9 +79,8 @@ void print_char(va_list args)
 	printf("%c", va_arg(args, int));
 }
 
-
 /**
- * print_float - prints float
+ * print_float - types float
  *
  * @args: received argument from `va_list`
  */
