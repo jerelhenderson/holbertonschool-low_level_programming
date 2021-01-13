@@ -31,7 +31,8 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", sep);
 				types[j].f(args);
-				sep = ", ";
+				if ((format[i + 1]) != '\0')
+					sep = ", ";
 				break;
 			}
 			j++;
@@ -58,7 +59,6 @@ void print_string(va_list args)
 	printf("%s", str);
 }
 
-
 /**
  * print_num - prints number
  *
@@ -68,6 +68,7 @@ void print_num(va_list args)
 {
 	printf("%d", va_arg(args, int));
 }
+
 
 
 /**
