@@ -1,5 +1,6 @@
 #include "variadic_functions.h"
 
+
 /**
  * print_all - prints anything given
  *
@@ -14,7 +15,7 @@ void print_all(const char * const format, ...)
 		{"s", print_string},
 		{NULL, NULL}
 	};
-	int i,j;
+	int i, j;
 	va_list args;
 	char *sep = ", ";
 
@@ -26,11 +27,15 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (types[j].type != NULL)
 		{
-			if (format[i] == *(types[j].type))
+			if (format[i] == *(types[j].type) && format[i + 1] != '\0')
 			{
 				types[j].f(args);
-				if (format[i + 1] != '\0')
-					printf("%s", sep);
+				printf("%s", sep);
+				break;
+			}
+			else if (format[i] == *(types[j].type) && format[i + 1] == '\0')
+			{
+				types[j].f(args);
 				break;
 			}
 			j++;
@@ -57,6 +62,7 @@ void print_string(va_list args)
 	printf("%s", str);
 }
 
+
 /**
  * print_num - prints number
  *
@@ -66,7 +72,6 @@ void print_num(va_list args)
 {
 	printf("%d", va_arg(args, int));
 }
-
 
 
 /**
