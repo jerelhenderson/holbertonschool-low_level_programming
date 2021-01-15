@@ -21,11 +21,15 @@ char *cap_string(char *s)
 			s[i] = ' ';
 			i++;
 			if (s[i] >= 'a' && s[i] <= 'z')
+			{
 				s[i] = s[i] - 32;
+				i++;
+			}
 		}
 
 		j = 0;
-		while (delims[j])
+
+		while (j < 10)
 		{
 			if (s[i] == delims[j])
 			{
@@ -33,7 +37,10 @@ char *cap_string(char *s)
 				if (s[i] == 32 || s[i] == '\t' || s[i] == '\n')
 					i++;
 				if (s[i] >= 'a' && s[i] <= 'z')
+				{
 					s[i] = s[i] - 32;
+					break;
+				}
 			}
 			j++;
 		}
