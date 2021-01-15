@@ -14,16 +14,18 @@ char *cap_string(char *s)
 
 	i = 0;
 
+	if (s[i] >= 'a' && s[i] <= 'z')
+		s[i] = s[i] - 32;
+	
 	while (s[i + 1] != '\0')
 	{
 		if (s[i] == 32 || s[i] == '\t' || s[i] == '\n')
 		{
 			s[i] = ' ';
-			i++;
-			if (s[i] >= 'a' && s[i] <= 'z')
+			if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
 			{
-				s[i] = s[i] - 32;
-				i++;
+				s[i + 1] = s[i + 1] - 32;
+				i = i + 2;
 			}
 		}
 
