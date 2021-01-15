@@ -25,7 +25,7 @@ char *cap_string(char *s)
 		}
 
 		j = 0;
-		while (delims[j] != '\0')
+		while (delims[j])
 		{
 			if (s[i] == delims[j])
 			{
