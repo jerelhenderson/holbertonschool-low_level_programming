@@ -9,14 +9,12 @@
  */
 char *cap_string(char *s)
 {
-	int i, j;
+	int i = 0, j;
 	int delims[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 
-	i = 0;
-
-	if (s[i] >= 'a' && s[i] <= 'z')
+	if (s[0] >= 'a' && s[0] <= 'z')
 		s[i] = s[i] - 32;
-	
+
 	while (s[i + 1] != '\0')
 	{
 		if (s[i] == 32 || s[i] == '\t' || s[i] == '\n')
@@ -43,6 +41,8 @@ char *cap_string(char *s)
 					s[i] = s[i] - 32;
 					break;
 				}
+				else
+					j = 0;
 			}
 			j++;
 		}
